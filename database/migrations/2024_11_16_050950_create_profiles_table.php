@@ -21,8 +21,6 @@ return new class extends Migration
                 ->cascadeOnDelete();
 
             $table->string('bio')->nullable();
-            $table->string('twitter')->nullable();
-            $table->string('website')->nullable();
             $table->timestamps();
         });
     }
