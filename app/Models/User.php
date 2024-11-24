@@ -48,6 +48,8 @@ class User extends Authenticatable
 
     public function profile() : HasOne
     {
-        return $this->hasOne(Profile::class);
+        return $this->hasOne(Profile::class)->withDefault([
+            'bio' => 'No bio provided'
+        ]);
     }
 }
